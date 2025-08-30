@@ -1,0 +1,41 @@
+{
+  "name": "ai-team-planner-backend",
+  "version": "1.0.0",
+  "description": "AI Team Planner Backend API",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "db:schema": "mysql -u root -p ai_team_planner < src/schema.sql",
+    "db:seed": "mysql -u root -p ai_team_planner < src/seeds.sql",
+    "db:setup": "npm run db:schema && npm run db:seed"
+  },
+  "keywords": [
+    "ai",
+    "planning",
+    "team",
+    "nodejs",
+    "openrouter"
+  ],
+  "author": "AI Team Planner",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.9",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.5.0",
+    "lage": "^2.14.9",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
